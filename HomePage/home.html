@@ -46,7 +46,7 @@
           <img src="../images/myprofile.jpeg" alt="Profile Pic" />
 
           <div class="actions">
-            <a href="#" class="action" onclick="reloadPage()">
+            <a href="#" class="action" onclick="reloadPage(); speakText('Profile')">
               <img class="actionIcon profileAction" src="../svg/profile.svg" alt="profile" />
               <p class="action_title">Profile</p>
             </a>
@@ -238,7 +238,7 @@
           <i class="ri-heart-3-fill"></i>
         </div>
 
-        <div class="post_description">
+        <div class="post_description">profile
           <!-- POST INTERACTIONS -->
           <div class="post_interactions">
             <div class="interactions">
@@ -434,6 +434,8 @@
 
   <script>
 
+    
+    alert("This is page is in underdevelopement if you have some greate idea then please let me know...!", speakText('This is page is in underdevelopement if you have some greate idea then please let me know...!'))
 
     var containers = document.querySelectorAll(".post_content");
 
@@ -458,12 +460,21 @@
     });
 
 
-    
+
     function reloadPage() {
-    location.reload();
+      location.reload();
+    }
+
+
+    function speakText(text) {
+    const synth = window.speechSynthesis;
+    const utterance = new SpeechSynthesisUtterance(text);
+    synth.speak(utterance);
   }
 
-   
+  
+
+
 
   </script>
 </body>
