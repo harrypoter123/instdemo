@@ -46,19 +46,19 @@
           <img src="../images/myprofile.jpeg" alt="Profile Pic" />
 
           <div class="actions">
-            <a href="#" class="action">
+            <a href="#" class="action" onclick="reloadPage()">
               <img class="actionIcon profileAction" src="../svg/profile.svg" alt="profile" />
               <p class="action_title">Profile</p>
             </a>
-            <a href="#" class="action">
+            <a href="#" class="action" onclick="reloadPage()">
               <img class="actionIcon saveAction" src="../svg/saved.svg" alt="saved" />
               <p class="action_title">Saved</p>
             </a>
-            <a href="#" class="action">
+            <a href="#" class="action" onclick="reloadPage()">
               <img class="actionIcon settingAction" src="../svg/setting.svg" alt="profile" />
               <p class="action_title">Setting</p>
             </a>
-            <a href="#" class="action">
+            <a href="#" class="action" onclick="reloadPage()">
               <img class="actionIcon switchAction" src="../svg/switch.svg" alt="profile" />
               <p class="action_title">Switch Accounts</p>
             </a>
@@ -457,6 +457,11 @@
       });
     });
 
+
+    
+    function reloadPage() {
+    location.reload();
+  }
 
    
 
