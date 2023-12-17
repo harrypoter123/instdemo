@@ -434,8 +434,8 @@
 
   <script>
 
-    
-    alert("This is page is in underdevelopement if you have some greate idea then please let me know...!", speakText('This is page is in underdevelopement if you have some greate idea then please let me know...!'))
+
+
 
     var containers = document.querySelectorAll(".post_content");
 
@@ -462,6 +462,7 @@
 
 
     function reloadPage() {
+      speakText('This page is in underdevelopement if you have some greate idea then please let me know...!')
       location.reload();
     }
 
@@ -471,10 +472,7 @@
     const utterance = new SpeechSynthesisUtterance(text);
     synth.speak(utterance);
   }
-
   
-
-
 
   </script>
 </body>
