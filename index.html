@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="google-site-verification" content="60x--0uJC5aj9SFz_Uy88117kQ8nornp62Zn4hIg2dA" />
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
   <title>Login • Instagram</title>
 
   <link rel="stylesheet" href="./styles.css" />
@@ -27,8 +28,9 @@
     <div class="right">
       <div class="loginForm">
         <img src="./icons/logo_large.png" alt="logo" class="logo" />
+        <a class="instruction" onclick="speakup()">First signup yourself then login</a>
         <form action="#">
-          <input type="username" name="username"  id="username" placeholder="Enter your username" required />
+          <input type="username" name="username" id="username" placeholder="Enter your username" required />
           <input type="password" name="password" id="password" placeholder="Password" required />
           <input type="submit" value="Log In" onclick="loginUser()" />
         </form>
@@ -54,8 +56,26 @@
       </div>
     </div>
   </div>
-  
+
   <script src="script.js"></script>
+  <script>
+
+    function speakup(){
+      speakText("First signup your self then login")
+    }
+    window.onload = function(){
+      speakup();
+    }
+
+    function speakText(text) {
+      const synth = window.speechSynthesis;
+      const utterance = new SpeechSynthesisUtterance(text);
+      synth.speak(utterance);
+    }
+
+
+
+  </script>
 </body>
 
 </html>
